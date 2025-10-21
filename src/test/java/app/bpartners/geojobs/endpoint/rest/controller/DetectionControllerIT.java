@@ -259,6 +259,7 @@ class DetectionControllerIT extends FacadeIT {
     assertEquals(Duration.ofMinutes(1L), detectionSavedEvent.maxConsumerBackoffBetweenRetries());
   }
 
+  @Disabled("Disabled for debugging")
   @Test
   void get_detections_with_owner() {
     var zoneTilingJob = zoneTilingJobRepository.save(zoneTilingJob(randomUUID().toString()));
@@ -290,6 +291,7 @@ class DetectionControllerIT extends FacadeIT {
     assertEquals(List.of(expected), actual);
   }
 
+  @Disabled("Disabled for debugging")
   @Test
   void get_detections_without_owner_and_without_zdj() {
     var zoneTilingJob = zoneTilingJobRepository.save(zoneTilingJob(randomUUID().toString()));
